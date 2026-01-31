@@ -77,11 +77,12 @@ Use clear, descriptive commit messages following this pattern:
 
 ## Key Files
 
-| File | Purpose |
-|------|---------|
-| `CLAUDE.md` | AI assistant guidelines |
-| `README.md` | Project documentation (to be created) |
-| `package.json` | Dependencies and scripts (if Node.js project) |
+| File | Purpose | Status |
+|------|---------|--------|
+| `CLAUDE.md` | AI assistant guidelines | ✓ Exists |
+| `README.md` | Project documentation | Pending |
+
+*Additional files will be documented here as the project develops.*
 
 ## AI Assistant Instructions
 
@@ -112,6 +113,8 @@ Use clear, descriptive commit messages following this pattern:
 
 - **Platform:** Linux
 - **Git:** Configured with remote origin
+- **Remote:** `origin` → `hashimoto737-glitch/test-claude`
+- **Default Branch:** `main` (or as configured)
 
 ## Updates
 
