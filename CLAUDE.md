@@ -1,129 +1,204 @@
-# CLAUDE.md - AI Assistant Guide
+# CLAUDE.md - AIアシスタント ガイドライン
 
-This document provides essential information for AI assistants working on this codebase.
+このドキュメントは、AIアシスタントがこのリポジトリで作業する際に従うべきルールと規約を定義します。
 
-## Repository Overview
+*This document defines rules and conventions that AI assistants must follow when working in this repository.*
 
-**Repository:** test-claude
-**Owner:** hashimoto737-glitch
-**Status:** New project (initial setup)
+---
 
-## Project Structure
+## 📖 リポジトリ概要 (Repository Overview)
+
+| 項目 | 内容 |
+|------|------|
+| **リポジトリ名** | test-claude |
+| **オーナー** | hashimoto737-glitch |
+| **状態** | 新規プロジェクト（初期セットアップ） |
+
+---
+
+## 📁 プロジェクト構造 (Project Structure)
 
 ```
 test-claude/
-├── CLAUDE.md          # AI assistant guidelines (this file)
-└── .git/              # Git version control
+├── CLAUDE.md          # AIアシスタント用ガイドライン（このファイル）
+└── .git/              # Gitバージョン管理
 ```
 
-*Note: This repository is in its initial state. Update this section as the project grows.*
+> **注意:** このリポジトリは初期状態です。プロジェクトの成長に合わせてこのセクションを更新してください。
 
-## Development Workflow
+---
 
-### Branch Naming Convention
+## 🔀 開発ワークフロー (Development Workflow)
 
-- Feature branches: `feature/<description>`
-- Bug fixes: `fix/<description>`
-- Documentation: `docs/<description>`
-- Claude AI branches: `claude/<description>-<session-id>`
+### ブランチ命名規則 (Branch Naming Convention)
 
-### Commit Message Format
+ブランチ名は以下のルールに従ってください：
 
-Use clear, descriptive commit messages following this pattern:
+| プレフィックス | 用途 | 例 |
+|---------------|------|-----|
+| `feature/` | 新機能の追加 | `feature/user-login` |
+| `fix/` | バグ修正 | `fix/login-error` |
+| `docs/` | ドキュメント変更 | `docs/update-readme` |
+| `claude/` | Claude AI用ブランチ | `claude/task-abc123` |
 
+### コミットメッセージの書き方 (Commit Message Format)
+
+明確で分かりやすいコミットメッセージを書いてください。
+
+**形式:**
 ```
-<type>: <short description>
+<タイプ>: <簡潔な説明>
 
-[optional body with more details]
+[任意: 詳細な説明]
 ```
 
-**Types:**
-- `feat`: New feature
-- `fix`: Bug fix
-- `docs`: Documentation changes
-- `refactor`: Code refactoring
-- `test`: Adding or updating tests
-- `chore`: Maintenance tasks
+**タイプ一覧:**
 
-### Git Workflow
+| タイプ | 意味 | English |
+|--------|------|---------|
+| `feat` | 新機能 | New feature |
+| `fix` | バグ修正 | Bug fix |
+| `docs` | ドキュメント変更 | Documentation |
+| `refactor` | リファクタリング | Code refactoring |
+| `test` | テストの追加・更新 | Tests |
+| `chore` | メンテナンス作業 | Maintenance |
 
-1. Create a feature branch from main
-2. Make changes with atomic commits
-3. Push branch and create a pull request
-4. Request review before merging
+**例:**
+```
+feat: ユーザーログイン機能を追加
 
-## Code Conventions
+- ログインフォームを実装
+- 認証ロジックを追加
+```
 
-### General Guidelines
+### Gitワークフロー (Git Workflow)
 
-- Write clean, readable code with meaningful variable/function names
-- Keep functions small and focused on a single responsibility
-- Add comments only when the code's intent isn't self-evident
-- Avoid over-engineering - implement only what's needed
+1. **ブランチ作成** - mainブランチから新しいブランチを作成
+2. **変更を加える** - 小さな単位でコミット（atomic commits）
+3. **プッシュ** - ブランチをリモートにプッシュ
+4. **プルリクエスト** - レビュー用のPRを作成
+5. **マージ** - レビュー後にマージ
 
-### File Organization
+---
 
-- Group related files in logical directories
-- Use consistent naming conventions (kebab-case for files, PascalCase for components)
-- Keep configuration files in the project root
+## 📝 コード規約 (Code Conventions)
 
-## Testing
+### 基本ルール (General Guidelines)
+
+| ルール | 説明 |
+|--------|------|
+| **可読性** | 意味のある変数名・関数名を使う |
+| **単一責任** | 関数は一つの機能に集中させる |
+| **コメント** | コードの意図が明確でない場合のみ追加 |
+| **シンプルに** | 過剰な設計を避け、必要なものだけを実装 |
+
+### ファイル整理 (File Organization)
+
+- 関連するファイルは論理的なディレクトリにまとめる
+- ファイル名: `kebab-case`（例: `user-profile.js`）
+- コンポーネント名: `PascalCase`（例: `UserProfile`）
+- 設定ファイルはプロジェクトルートに配置
+
+---
+
+## 🧪 テスト (Testing)
+
+*プロジェクトの進行に合わせて、テスト手順をここに追加してください。*
 
 *Add testing instructions here as the project develops.*
 
-## Build & Run
+---
+
+## 🚀 ビルド・実行 (Build & Run)
+
+*プロジェクトの進行に合わせて、ビルド・実行手順をここに追加してください。*
 
 *Add build and run instructions here as the project develops.*
 
-## Key Files
+---
 
-| File | Purpose | Status |
-|------|---------|--------|
-| `CLAUDE.md` | AI assistant guidelines | ✓ Exists |
-| `README.md` | Project documentation | Pending |
+## 📂 主要ファイル (Key Files)
 
-*Additional files will be documented here as the project develops.*
+| ファイル | 目的 | 状態 |
+|----------|------|------|
+| `CLAUDE.md` | AIアシスタント用ガイドライン | ✅ 存在 |
+| `README.md` | プロジェクトドキュメント | 📝 未作成 |
 
-## AI Assistant Instructions
-
-### Do
-
-- Read relevant files before making changes
-- Follow existing code patterns and conventions
-- Make minimal, focused changes
-- Test changes when possible
-- Commit with clear, descriptive messages
-
-### Don't
-
-- Over-engineer solutions
-- Add unnecessary features or abstractions
-- Change code style without being asked
-- Make assumptions about missing requirements
-- Commit sensitive data (API keys, credentials)
-
-### When Uncertain
-
-- Ask clarifying questions
-- Review existing code for patterns
-- Start with the simplest solution
-- Document assumptions made
-
-## Environment
-
-- **Platform:** Linux
-- **Git:** Configured with remote origin
-- **Remote:** `origin` → `hashimoto737-glitch/test-claude`
-- **Default Branch:** `main` (or as configured)
-
-## Updates
-
-This document should be updated when:
-- New major features are added
-- Development workflows change
-- New conventions are established
-- Project structure significantly changes
+*プロジェクトの成長に合わせて、追加ファイルをここに記載してください。*
 
 ---
+
+## 🤖 AIアシスタントへの指示 (AI Assistant Instructions)
+
+### ✅ やるべきこと (Do)
+
+| ルール | 説明 |
+|--------|------|
+| **ファイルを読む** | 変更を加える前に関連ファイルを必ず読む |
+| **パターンに従う** | 既存のコードパターンと規約に従う |
+| **最小限の変更** | 必要最小限の変更に留める |
+| **テストする** | 可能な限り変更をテストする |
+| **明確なコミット** | 分かりやすいコミットメッセージを書く |
+
+### ❌ やってはいけないこと (Don't)
+
+| ルール | 説明 |
+|--------|------|
+| **過剰設計** | 必要以上に複雑なソリューションを作らない |
+| **不要な機能** | 依頼されていない機能や抽象化を追加しない |
+| **スタイル変更** | 依頼なしにコードスタイルを変更しない |
+| **推測しない** | 不明な要件について勝手に判断しない |
+| **機密情報** | APIキーや認証情報をコミットしない |
+
+### ❓ 不明な場合 (When Uncertain)
+
+1. **質問する** - 明確化のための質問をする
+2. **既存コードを確認** - パターンを探す
+3. **シンプルに始める** - 最もシンプルな解決策から始める
+4. **仮定を記録** - 行った仮定を文書化する
+
+---
+
+## ⚠️ 重要な注意事項 (Important Notes)
+
+> **初心者の方へ:**
+>
+> - 分からないことがあれば、まず質問してください
+> - 小さな変更から始めて、少しずつ進めましょう
+> - 失敗を恐れないでください。Gitで元に戻せます
+> - コードを変更する前に、必ずバックアップ（コミット）を取りましょう
+
+> **For beginners:**
+>
+> - If you're unsure about something, ask first
+> - Start with small changes and progress gradually
+> - Don't be afraid of mistakes - Git can help you revert
+> - Always commit (backup) before making changes
+
+---
+
+## 🖥️ 環境情報 (Environment)
+
+| 項目 | 値 |
+|------|-----|
+| **プラットフォーム** | Linux |
+| **Git** | リモートoriginに接続済み |
+| **リモート** | `origin` → `hashimoto737-glitch/test-claude` |
+| **デフォルトブランチ** | `main` |
+
+---
+
+## 🔄 更新履歴 (Updates)
+
+このドキュメントは以下の場合に更新してください：
+
+- 新しい主要機能が追加されたとき
+- 開発ワークフローが変更されたとき
+- 新しい規約が確立されたとき
+- プロジェクト構造が大きく変更されたとき
+
+---
+
+*最終更新: 2026-01-31*
 
 *Last updated: 2026-01-31*
