@@ -12,11 +12,12 @@ This document provides essential information for AI assistants working on this c
 
 ```
 test-claude/
-├── CLAUDE.md          # AI assistant guidelines (this file)
-└── .git/              # Git version control
+├── CLAUDE.md                        # AI assistant guidelines (this file)
+├── Status.md                        # 作業進捗・引き継ぎ情報（随時更新）
+├── notion-calendar-evaluation.md    # ツール統合評価レポート
+├── data-export-instructions.md      # 事務員向けデータ抽出手順書
+└── .git/                            # Git version control
 ```
-
-*Note: This repository is in its initial state. Update this section as the project grows.*
 
 ## Development Workflow
 
@@ -79,19 +80,49 @@ Use clear, descriptive commit messages following this pattern:
 
 | File | Purpose |
 |------|---------|
-| `CLAUDE.md` | AI assistant guidelines |
-| `README.md` | Project documentation (to be created) |
-| `package.json` | Dependencies and scripts (if Node.js project) |
+| `CLAUDE.md` | AI assistant guidelines（このファイル） |
+| `Status.md` | 作業進捗・引き継ぎ情報（セッション間の引き継ぎ用） |
+| `notion-calendar-evaluation.md` | ツール統合評価レポート |
+| `data-export-instructions.md` | 事務員向けデータ抽出手順書 |
+
+## 思考中断・作業迷子防止ルール（Status MD 自動更新）
+
+セッションが途中で切れた場合に備えて、次のセッションへスムーズに引き継げるよう、
+以下のルールを必ず守ること。
+
+### ルール
+
+1. **作業の節目ごとに `Status.md` を上書き更新する**
+   - 新しいタスクに着手したとき
+   - タスクが完了したとき
+   - 方針が変わったとき
+   - ユーザーから新しい指示を受けたとき
+
+2. **`Status.md` に含める内容**
+   - 現在の作業フェーズ（どこまで終わったか）
+   - 次にやるべきこと（未着手・進行中のタスク）
+   - ユーザーとの合意事項・決定事項
+   - 保留中の課題や確認待ちの事項
+
+3. **セッション開始時の確認**
+   - 新しいセッションが始まったら、まず `Status.md` を読み込む
+   - 前回のセッションの続きから作業を再開する
+   - 不明点があればユーザーに確認する
+
+4. **`Status.md` は必ずコミット＆プッシュする**
+   - リポジトリに含めることで、別のセッションからも読める状態にする
 
 ## AI Assistant Instructions
 
 ### Do
 
 - Read relevant files before making changes
+- **セッション開始時に `Status.md` を確認し、前回の続きから作業する**
 - Follow existing code patterns and conventions
 - Make minimal, focused changes
 - Test changes when possible
 - Commit with clear, descriptive messages
+- **作業の節目ごとに `Status.md` を更新してコミットする**
 
 ### Don't
 
@@ -123,4 +154,4 @@ This document should be updated when:
 
 ---
 
-*Last updated: 2026-01-31*
+*Last updated: 2026-02-11*
